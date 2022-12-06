@@ -22,4 +22,4 @@
 
 5.8) //a[contains(@title, 'Сброс')]
 
-5.9)
+5.9) //a[@id='mw-createaccount-join']
