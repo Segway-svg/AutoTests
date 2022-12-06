@@ -6,19 +6,19 @@
 
 4) //table[@align='center']//tr//td//p//tt[text()[contains(.,'Редактировать просто')]]
 
-5.1) //form[@class='mw-htmlform mw-ui-vform mw-ui-container']//div[contains(@class, 'loginText')]//label[@for='wpName1']
+5.1) //div[contains(@class, 'loginText')]//label[@for='wpName1']
 
-5.2) //form[@class='mw-htmlform mw-ui-vform mw-ui-container']//div[contains(@class, 'loginText')]//div[@class='mw-input']
+5.2) //div[contains(@class, 'loginText')]//div[@class='mw-input']
 
-5.3) //form[@class='mw-htmlform mw-ui-vform mw-ui-container']//div[contains(@class, 'loginText')]//label[@for='wpPassword1']
+5.3) //div[contains(@class, 'loginText')]//label[@for='wpPassword1']
 
-5.4) //form[@class='mw-htmlform mw-ui-vform mw-ui-container']//div[contains(@class, 'loginPassword')]//div[@class='mw-input']
+5.4) //div[contains(@class, 'loginPassword')]//div[@class='mw-input']
 
-5.5) //form[@class='mw-htmlform mw-ui-vform mw-ui-container']//div[contains(@class, 'HTMLCheckField')]//div[contains(@class, 'htmlform')]//input[@name='wpRemember']
+5.5) //div[contains(@class, 'HTMLCheckField')]//div[contains(@class, 'htmlform')]//input[@name='wpRemember']
 
-5.6) //form[@class='mw-htmlform mw-ui-vform mw-ui-container']//div[contains(@class, 'HTMLSubmitField')]//div[contains(@class, 'htmlform')]
+5.6) //div[contains(@class, 'HTMLSubmitField')]//div[contains(@class, 'htmlform')]
 
-5.7)
+5.7) 
 
 5.8)
 
