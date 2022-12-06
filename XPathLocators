@@ -1,4 +1,5 @@
-1) //div[@class='main-top']//span[@class='mw-headline' and @id='Добро_пожаловать_в_Википедию,'] (а лучше //div[@class='main-top-left'])
+1) //div[@class='main-top']//span[@class='mw-headline' and @id='Добро_пожаловать_в_Википедию,'] 
+(а лучше //div[@class='main-top-left'])
 
 2) //ul[@class='vector-menu-content-list']//a[contains(@href, 'show-download-screen') and @title='Скачать эту страницу как файл PDF']
 
@@ -6,7 +7,8 @@
 
 4) //table[@align='center']//tr//td//p//tt[text()[contains(.,'Редактировать просто')]]
 
-5.1) //div[contains(@class, 'loginText')]//label[@for='wpName1']
+5.1) //div[contains(@class, 'loginText')]//label[@for='wpName1'] 
+(а лучше //*[@for='wpName1'])
 
 5.2) //div[contains(@class, 'loginText')]//div[@class='mw-input']
 
