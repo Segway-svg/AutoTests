@@ -18,8 +18,8 @@
 
 5.6) //div[contains(@class, 'HTMLSubmitField')]//div[contains(@class, 'htmlform')]
 
-5.7) //input[@name='wpRemember']
+5.7) //div[contains(@class, 'userlogin-help')]//a[contains(text(), 'Помощь')]
 
-5.8)
+5.8) //a[contains(@title, 'Сброс')]
 
 5.9)
