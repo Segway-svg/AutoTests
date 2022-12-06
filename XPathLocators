@@ -1,4 +1,4 @@
-1) //div[@class='main-top']//span[@class='mw-headline' and @id='Добро_пожаловать_в_Википедию,']
+1) //div[@class='main-top']//span[@class='mw-headline' and @id='Добро_пожаловать_в_Википедию,'] (а лучше //div[@class='main-top-left'])
 
 2) //ul[@class='vector-menu-content-list']//a[contains(@href, 'show-download-screen') and @title='Скачать эту страницу как файл PDF']
 
