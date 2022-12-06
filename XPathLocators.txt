@@ -1,0 +1,17 @@
+1) //div[@class='main-top']//span[@class='mw-headline' and @id='Добро_пожаловать_в_Википедию,']
+
+2) //ul[@class='vector-menu-content-list']//a[contains(@href, 'show-download-screen') and @title='Скачать эту страницу как файл PDF']
+
+3) //a[contains(@title, 'Войска Нидерландской Ост-Индской компании')]//img[contains(@alt, 'Войска Нидерландской Ост-Индской компании')]
+
+4) //table[@align='center']//tr//td//p//tt[text()[contains(.,'Редактировать просто')]]
+
+5.1) //form[@class='mw-htmlform mw-ui-vform mw-ui-container']//div[contains(@class, 'loginText')]//label[@for='wpName1']
+
+5.2) 
+
+5.3) //form[@class='mw-htmlform mw-ui-vform mw-ui-container']//div[contains(@class, 'loginText')]//label[@for='wpPassword1']
+
+5.4)
+
+5.5)
