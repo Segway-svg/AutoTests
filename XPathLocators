@@ -14,4 +14,8 @@
 
 5.4) //form[@class='mw-htmlform mw-ui-vform mw-ui-container']//div[contains(@class, 'loginPassword')]//div[@class='mw-input']
 
-5.5)
+5.5) //form[@class='mw-htmlform mw-ui-vform mw-ui-container']//div[contains(@class, 'HTMLSubmitField')]//div[contains(@class, 'htmlform')]
+
+5.6)
+
+5.7)
