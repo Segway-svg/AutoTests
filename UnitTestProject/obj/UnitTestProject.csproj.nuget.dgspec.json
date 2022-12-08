@@ -51,21 +51,13 @@
               "target": "Package",
               "version": "[4.3.1, )"
             },
-            "Selenium.Chrome.WebDriver": {
-              "target": "Package",
-              "version": "[85.0.0, )"
-            },
-            "Selenium.Support": {
-              "target": "Package",
-              "version": "[4.7.0, )"
-            },
             "Selenium.WebDriver": {
               "target": "Package",
               "version": "[4.7.0, )"
             },
-            "WebDriverManager": {
+            "WebDriverManager-net462": {
               "target": "Package",
-              "version": "[2.16.2, )"
+              "version": "[2.9.3, )"
             },
             "coverlet.collector": {
               "target": "Package",

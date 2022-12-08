@@ -1,21 +1,17 @@
-using System;
 using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 
 namespace UnitTest1
 {
     public class Tests
     {
-        private IWebDriver _driver;
-        private string _steamUrl;
+        private static IWebDriver _driver;
+        private string steamUrl = "https://store.steampowered.com/";
 
         [SetUp]
         public void Setup()
         {
-            _driver = new ChromeDriver("C:\\Users\\tukat\\RiderProjects\\TestProject4\\" +
-                                       "TestProject4\\bin\\Debug\\net5.0\\chromedriver.exe");
-            _steamUrl = "https://store.steampowered.com/";
+            _driver = Driver.GetInstance();
         }
 
         [TearDown]
@@ -28,8 +24,7 @@ namespace UnitTest1
         [Test]
         public void Test1()
         {
-            Console.WriteLine(_driver.Title);
-            _driver.Navigate().GoToUrl(_steamUrl);
+            _driver.Navigate().GoToUrl(steamUrl);
             Assert.Pass();
         }
     }
