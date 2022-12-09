@@ -105,3 +105,16 @@ C:\Users\tukat\RiderProjects\SteamTestHw\UnitTestProject\bin\Debug\net5.0\ICShar
 C:\Users\tukat\RiderProjects\SteamTestHw\UnitTestProject\bin\Debug\net5.0\selenium-manager\linux\selenium-manager
 C:\Users\tukat\RiderProjects\SteamTestHw\UnitTestProject\bin\Debug\net5.0\selenium-manager\macos\selenium-manager
 C:\Users\tukat\RiderProjects\SteamTestHw\UnitTestProject\bin\Debug\net5.0\selenium-manager\windows\selenium-manager.exe
+C:\Users\tukat\RiderProjects\SteamTestHw\UnitTestProject\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\tukat\RiderProjects\SteamTestHw\UnitTestProject\bin\Debug\net5.0\Microsoft.Extensions.Configuration.dll
+C:\Users\tukat\RiderProjects\SteamTestHw\UnitTestProject\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\tukat\RiderProjects\SteamTestHw\UnitTestProject\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\tukat\RiderProjects\SteamTestHw\UnitTestProject\bin\Debug\net5.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\tukat\RiderProjects\SteamTestHw\UnitTestProject\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\tukat\RiderProjects\SteamTestHw\UnitTestProject\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\tukat\RiderProjects\SteamTestHw\UnitTestProject\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\tukat\RiderProjects\SteamTestHw\UnitTestProject\bin\Debug\net5.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\tukat\RiderProjects\SteamTestHw\UnitTestProject\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\tukat\RiderProjects\SteamTestHw\UnitTestProject\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\tukat\RiderProjects\SteamTestHw\UnitTestProject\bin\Debug\net5.0\System.Text.Encodings.Web.dll
+C:\Users\tukat\RiderProjects\SteamTestHw\UnitTestProject\bin\Debug\net5.0\System.Text.Json.dll

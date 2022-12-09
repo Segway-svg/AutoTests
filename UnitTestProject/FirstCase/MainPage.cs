@@ -1,25 +1,18 @@
-﻿using OpenQA.Selenium;
+﻿using System.Text.Json.Nodes;
+using UnitTestProject.CustomConfigurations;
 
-namespace UnitTestProject
+namespace UnitTestProject.FirstCase
 {
     public class MainPage
     {
         private string _nameInputLocator;
         private string _loginButtonLocator;
-
-        public void Setup()
-        {
-            
-        }
-
-        public void TearDown()
-        {
-            
-        }
         
         public void OpenSteam()
         {
-            // TODO
+            var driver = Driver.GetInstance();
+            string steamUrl = JsonConfigurator.GetConfigurationData().SteamUrl;
+            driver.Navigate().GoToUrl(steamUrl);
         }
         
         public void ClickAboutButton()
@@ -33,7 +26,7 @@ namespace UnitTestProject
             return "";
         }
         
-        public void ClickStoreButtonTest()
+        public void ClickStoreButton()
         {
             // TODO
         }

@@ -3,7 +3,7 @@ using OpenQA.Selenium.Chrome;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 
-namespace UnitTestProject
+namespace UnitTestProject.FirstCase
 {
     public class Driver
     {
