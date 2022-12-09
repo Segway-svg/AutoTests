@@ -3,12 +3,14 @@ using OpenQA.Selenium.Chrome;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 
-namespace UnitTest1
+namespace UnitTestProject
 {
     public class Driver
     {
         private Driver()
         {
+            new DriverManager().SetUpDriver(new ChromeConfig());
+            _driver = new ChromeDriver();
         }
 
         private static IWebDriver _driver = null;
@@ -17,10 +19,8 @@ namespace UnitTest1
         {
             if (_driver == null)
             {
-                new DriverManager().SetUpDriver(new EdgeConfig());
-                _driver = new ChromeDriver("85");
+                new Driver();
             }
-
             return _driver;
         }
     }
