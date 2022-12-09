@@ -9,8 +9,11 @@ namespace UnitTestProject
     {
         private Driver()
         {
+            ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.AddArgument("--incognito");
             new DriverManager().SetUpDriver(new ChromeConfig());
-            _driver = new ChromeDriver();
+            _driver = new ChromeDriver(chromeOptions);
+
         }
 
         private static IWebDriver _driver = null;
