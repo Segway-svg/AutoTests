@@ -9,27 +9,23 @@ namespace UnitTestProject.FirstCase
         {
             Driver.GetInstance();
         }
-        
-        [TearDown]
-        public void TearDown()
-        {
-            var driver = Driver.GetInstance();
-            driver.Quit();
-        }
-        
+
         [Test]
         public void OpenSteamTest()
         {
             MainPage mainPage = new MainPage();
-            mainPage.OpenSteam();
-            Assert.Pass();
             
-            // TODO Кликнуть на кнопку ABOUT
+            Assert.True(mainPage.OpenSteam(), "mainPage.OpenSteam()");
             
-            // TODO Сравнить числа игроков
+            Assert.True(mainPage.ClickAboutButton(), "mainPage.ClickAboutButton()");
             
-            // TODO Перейти на страницу магазина
-            
+            Assert.True(mainPage.ClickStoreButton(), "mainPage.ClickStoreButton()");
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            Driver.GetInstance().Quit();
         }
     }
 }

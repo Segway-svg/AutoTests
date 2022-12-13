@@ -9,14 +9,19 @@ namespace UnitTestProject.FirstCase
     {
         private Driver()
         {
+            // TODO factory
             ChromeOptions chromeOptions = new ChromeOptions();
+            
             chromeOptions.AddArgument("--incognito");
+            chromeOptions.AddArgument("--lang=en-GB");
+            
             new DriverManager().SetUpDriver(new ChromeConfig());
+            
             _driver = new ChromeDriver(chromeOptions);
-
+            _driver.Manage().Window.Maximize();
         }
 
-        private static IWebDriver _driver = null;
+        private static IWebDriver _driver;
 
         public static IWebDriver GetInstance()
         {
