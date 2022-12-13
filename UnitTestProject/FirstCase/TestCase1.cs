@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 
 namespace UnitTestProject.FirstCase
@@ -19,6 +20,9 @@ namespace UnitTestProject.FirstCase
             
             Assert.True(mainPage.ClickAboutButton(), "mainPage.ClickAboutButton()");
             
+            Tuple<int, int> stats = mainPage.CompareNumberOfPlayers();
+            Assert.AreEqual(stats.Item1, stats.Item2);
+
             Assert.True(mainPage.ClickStoreButton(), "mainPage.ClickStoreButton()");
         }
 

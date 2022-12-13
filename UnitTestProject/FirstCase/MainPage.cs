@@ -1,4 +1,8 @@
-﻿using OpenQA.Selenium;
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using AngleSharp.Text;
+using OpenQA.Selenium;
 using UnitTestProject.CustomConfigurations;
 
 namespace UnitTestProject.FirstCase
@@ -46,10 +50,37 @@ namespace UnitTestProject.FirstCase
             return true;
         }
 
-        public string CompareNumberOfPlayers()
+        public Tuple<int, int> CompareNumberOfPlayers()
         {
-            // TODO
-            return "";
+            List<string> strings = new List<string>();
+            try
+            {
+                strings.Add(Driver.GetInstance().FindElement(_statsPeakOnlineLocator).Text);
+                strings.Add(Driver.GetInstance().FindElement(_statsOnlineNowLocator).Text);
+            }
+            catch
+            {
+                return Tuple.Create(0, 0);
+            }
+            
+            List<string> counters = new List<string>();
+            
+            for (int i = 0; i < strings.Count; i++)
+            {
+                string[] strArr = strings[i].Split("\n");
+                for (int j = 0; j < strArr.Length; j++)
+                {
+                    if (strArr.Contains(","))
+                    {
+                        counters.Add(strArr[j]);
+                    }
+                }
+            }
+
+            int peakCount = int.Parse(counters[0].Replace(",", ""));
+            int nowCount = int.Parse(counters[1].Replace(",", ""));
+
+            return Tuple.Create(peakCount, nowCount);
         }
         
         public bool ClickStoreButton()
