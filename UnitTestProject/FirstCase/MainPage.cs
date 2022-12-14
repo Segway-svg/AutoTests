@@ -52,35 +52,34 @@ namespace UnitTestProject.FirstCase
 
         public Tuple<int, int> CompareNumberOfPlayers()
         {
-            List<string> strings = new List<string>();
-            try
-            {
-                strings.Add(Driver.GetInstance().FindElement(_statsPeakOnlineLocator).Text);
-                strings.Add(Driver.GetInstance().FindElement(_statsOnlineNowLocator).Text);
-            }
-            catch
-            {
-                return Tuple.Create(0, 0);
-            }
+            string peakStr = Driver.GetInstance().FindElement(_statsPeakOnlineLocator).Text;
+            string[] peakStrArr = peakStr.Split("\n");
             
-            List<string> counters = new List<string>();
-            
-            for (int i = 0; i < strings.Count; i++)
+            for (int i = 0; i < peakStrArr.Length; i++)
             {
-                string[] strArr = strings[i].Split("\n");
-                for (int j = 0; j < strArr.Length; j++)
+                if (peakStrArr.Contains(","))
                 {
-                    if (strArr.Contains(","))
-                    {
-                        counters.Add(strArr[j]);
-                    }
+                    peakStr = peakStrArr[i].Replace(",", "");
+                }
+            }
+            
+            string onlineStr = Driver.GetInstance().FindElement(_statsOnlineNowLocator).Text;
+            string[] onlineStrArr = onlineStr.Split("\n");
+
+            for (int i = 0; i < onlineStrArr.Length; i++)
+            {
+                if (onlineStrArr.Contains(","))
+                {
+                    onlineStr = onlineStrArr[i].Replace(",", "");
                 }
             }
 
-            int peakCount = int.Parse(counters[0].Replace(",", ""));
-            int nowCount = int.Parse(counters[1].Replace(",", ""));
+            if (int.TryParse(peakStr, out int peakNum) && int.TryParse(onlineStr, out int onlineNum))
+            {
+                return Tuple.Create(peakNum, onlineNum);
+            }
 
-            return Tuple.Create(peakCount, nowCount);
+            return Tuple.Create(0, 0);
         }
         
         public bool ClickStoreButton()

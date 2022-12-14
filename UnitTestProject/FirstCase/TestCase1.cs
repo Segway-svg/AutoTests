@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices.ComTypes;
 using NUnit.Framework;
 
 namespace UnitTestProject.FirstCase
