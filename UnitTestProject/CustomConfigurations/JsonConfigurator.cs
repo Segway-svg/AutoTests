@@ -7,7 +7,8 @@ namespace UnitTestProject.CustomConfigurations
     {
         public static string GetSteamUrl()
         {
-            IConfigurationSection configurationData = GetConfigurationRoot().GetSection(nameof(ConfigurationDataConfig));
+            IConfigurationSection configurationData = 
+                GetConfigurationRoot().GetSection(nameof(ConfigurationDataConfig));
             return configurationData.Get<ConfigurationDataConfig>().SteamUrl;
         }
 
@@ -20,18 +21,19 @@ namespace UnitTestProject.CustomConfigurations
         
         public static string MainPageUniqueLocator()
         {
-            IConfigurationSection testData = GetConfigurationRoot().GetSection(nameof(TestDataConfig));
+            IConfigurationSection testData = 
+                GetConfigurationRoot().GetSection(nameof(TestDataConfig));
             return testData.Get<TestDataConfig>().MainPageUniqueLocator;
         }
 
-        public static ConfigurationDataConfig GetTestData()
+        public static TestDataConfig GetTestData()
         {
             IConfigurationSection testData = 
                 GetConfigurationRoot().GetSection(nameof(TestDataConfig));
-            return testData.Get<ConfigurationDataConfig>();
+            return testData.Get<TestDataConfig>();
         }
-        
-        public static IConfigurationRoot GetConfigurationRoot()
+
+        private static IConfigurationRoot GetConfigurationRoot()
         {
             IConfigurationRoot config = new ConfigurationBuilder()
                 .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)

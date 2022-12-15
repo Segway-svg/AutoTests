@@ -238,3 +238,4 @@ C:\Users\tukat\RiderProjects\s.sesin\UnitTestProject\obj\Debug\net5.0\refint\Uni
 C:\Users\tukat\RiderProjects\s.sesin\UnitTestProject\obj\Debug\net5.0\UnitTestProject.pdb
 C:\Users\tukat\RiderProjects\s.sesin\UnitTestProject\obj\Debug\net5.0\UnitTestProject.genruntimeconfig.cache
 C:\Users\tukat\RiderProjects\s.sesin\UnitTestProject\obj\Debug\net5.0\ref\UnitTestProject.dll
+C:\Users\tukat\RiderProjects\s.sesin\UnitTestProject\bin\Debug\net5.0\SeleniumExtras.WaitHelpers.dll

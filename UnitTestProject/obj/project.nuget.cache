@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "nm0AuiIPdn/EKuEu9qVSE74LsXc1ZqpBbnHYNtt/0WoXcjA0vwoZipbSyx46n/lJ3APCHc4EMq43jijXS8T2Uw==",
+  "dgSpecHash": "4dL6XAyxWUuJgeBincayoPEhnI+Cf2zbfZq+6k3sSvsGCEJzjUHnxNTLOKQdztOcu323E6VvJ45Rxunne0j4kQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\tukat\\RiderProjects\\s.sesin\\UnitTestProject\\UnitTestProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tukat\\.nuget\\packages\\anglesharp\\0.14.0\\anglesharp.0.14.0.nupkg.sha512",
     "C:\\Users\\tukat\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
+    "C:\\Users\\tukat\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
     "C:\\Users\\tukat\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "C:\\Users\\tukat\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",
     "C:\\Users\\tukat\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",

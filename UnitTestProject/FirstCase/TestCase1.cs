@@ -1,10 +1,10 @@
 using System;
-using System.Runtime.InteropServices.ComTypes;
 using NUnit.Framework;
+using UnitTestProject.CommonEntities;
 
 namespace UnitTestProject.FirstCase
 {
-    public class Tests
+    public class TestCase1
     {
         [SetUp]
         public void Setup()
@@ -13,18 +13,18 @@ namespace UnitTestProject.FirstCase
         }
 
         [Test]
-        public void OpenSteamTest()
+        public void FirstCaseTests()
         {
-            MainPage mainPage = new MainPage();
-            
-            Assert.True(mainPage.OpenSteam(), "mainPage.OpenSteam()");
-            
-            Assert.True(mainPage.ClickAboutButton(), "mainPage.ClickAboutButton()");
-            
-            Tuple<int, int> stats = mainPage.CompareNumberOfPlayers();
+            Assert.True(SteamOpener.OpenSteam(), "SteamOpener.OpenSteam()");
+
+            FirstTestCaseMainPage firstTestCaseMainPage = new FirstTestCaseMainPage();
+            Assert.True(firstTestCaseMainPage.ClickAboutButton(), "mainPage.ClickAboutButton()");
+
+            Tuple<int, int> stats = firstTestCaseMainPage.CompareNumberOfPlayers();
             Assert.AreEqual(stats.Item1, stats.Item2);
 
-            Assert.True(mainPage.ClickStoreButton(), "mainPage.ClickStoreButton()");
+            AboutPage aboutPage = new AboutPage();
+            Assert.True(aboutPage.ClickStoreButton(), "mainPage.ClickStoreButton()");
         }
 
         [TearDown]
