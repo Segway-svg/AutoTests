@@ -24,9 +24,9 @@ namespace UnitTestProject.SecondCase
             Assert.True(salesLeadersPage.ClickWatchMoreButton(), "mainPage.ClickWatchMoreButton()");
             
             AllSalesLeaders allSalesLeaders = new AllSalesLeaders();
-            allSalesLeaders.ClickOsCheckBox();
-            allSalesLeaders.ClickGenreCheckBox();
-            allSalesLeaders.ClickNumberOfPlayersCheckbox();
+            Assert.True(allSalesLeaders.ClickOsCheckBox(), "allSalesLeaders.ClickOsCheckBox()");
+            Assert.True(allSalesLeaders.ClickGenreCheckBox(), "allSalesLeaders.ClickGenreCheckBox()");
+            Assert.True(allSalesLeaders.ClickNumberOfPlayersCheckbox(), "allSalesLeaders.ClickNumberOfPlayersCheckbox()");
         }
 
         [TearDown]
