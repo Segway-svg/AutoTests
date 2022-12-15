@@ -23,8 +23,10 @@ namespace UnitTestProject.SecondCase
             SalesLeadersPage salesLeadersPage = new SalesLeadersPage();
             Assert.True(salesLeadersPage.ClickWatchMoreButton(), "mainPage.ClickWatchMoreButton()");
             
-            // AllSalesLeaders allSalesLeaders = new AllSalesLeaders();
-            // allSalesLeaders.ClickOsButton();
+            AllSalesLeaders allSalesLeaders = new AllSalesLeaders();
+            allSalesLeaders.ClickOsCheckBox();
+            allSalesLeaders.ClickGenreCheckBox();
+            allSalesLeaders.ClickNumberOfPlayersCheckbox();
         }
 
         [TearDown]
