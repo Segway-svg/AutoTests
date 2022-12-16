@@ -12,7 +12,9 @@ namespace UnitTestProject.SecondCase
             System.Threading.Thread.Sleep(5000);
             IJavaScriptExecutor ts = Driver.GetInstance();
             ts.ExecuteScript("window.scrollBy(0, document.body.scrollHeight)");
-            
+
+            System.Threading.Thread.Sleep(5000);
+
             IWebElement watchMoreButton = Driver.GetInstance().FindElement(_watchMoreLocator);
             watchMoreButton.Click();
 

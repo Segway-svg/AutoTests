@@ -1,7 +1,6 @@
 using NUnit.Framework;
 using UnitTestProject.CommonEntities;
 
-
 namespace UnitTestProject.SecondCase
 {
     public class TestCase2
@@ -23,10 +22,15 @@ namespace UnitTestProject.SecondCase
             SalesLeadersPage salesLeadersPage = new SalesLeadersPage();
             Assert.True(salesLeadersPage.ClickWatchMoreButton(), "mainPage.ClickWatchMoreButton()");
             
-            AllSalesLeaders allSalesLeaders = new AllSalesLeaders();
-            Assert.True(allSalesLeaders.ClickOsCheckBox(), "allSalesLeaders.ClickOsCheckBox()");
-            Assert.True(allSalesLeaders.ClickGenreCheckBox(), "allSalesLeaders.ClickGenreCheckBox()");
-            Assert.True(allSalesLeaders.ClickNumberOfPlayersCheckbox(), "allSalesLeaders.ClickNumberOfPlayersCheckbox()");
+            AllSalesLeadersPage allSalesLeadersPage = new AllSalesLeadersPage();
+            Assert.True(allSalesLeadersPage.ClickOsCheckBox(), "allSalesLeaders.ClickOsCheckBox()");
+            Assert.True(allSalesLeadersPage.ClickGenreCheckBox(), "allSalesLeaders.ClickGenreCheckBox()");
+            Assert.True(allSalesLeadersPage.ClickNumberOfPlayersCheckbox(), "allSalesLeaders.ClickNumberOfPlayersCheckbox()");
+            Assert.True(allSalesLeadersPage.GetTopGameInfo());
+
+            TopGamePage topGamePage = new TopGamePage();
+            Assert.True(topGamePage.GetTopGameInfo());
+            Assert.True(topGamePage.CompareTopGameInfoFromDifferentSources());
         }
 
         [TearDown]
