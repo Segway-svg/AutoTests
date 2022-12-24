@@ -1,8 +1,6 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium;
 using UnitTestProject.CustomConfigurations;
-using WebDriverManager;
-using WebDriverManager.DriverConfigs.Impl;
+using UnitTestProject.Factory;
 
 namespace UnitTestProject.CommonEntities
 {
@@ -10,24 +8,13 @@ namespace UnitTestProject.CommonEntities
     {
         private Driver()
         {
-            // TODO factory
-            ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.AddArgument("--incognito");
-
-            if (JsonConfigurator.GetConfigurationData().Language == "Rus")
-            {
-                chromeOptions.AddArgument("--lang=rus");
-            }
-            else
-            {
-                chromeOptions.AddArgument("--lang=en-GB");
-            }
-            new DriverManager().SetUpDriver(new ChromeConfig());
-            _driver = new ChromeDriver(chromeOptions);
-            _driver.Manage().Window.Maximize();
+            IBrowser creator = new ChromeBrowser();
+            IProduction chrome = creator.Create();
+            _driver = chrome.Release(language);
         }
 
         private static WebDriver _driver;
+        private static string language = JsonConfigurator.GetConfigurationData().DefaultLanguage;
 
         public static WebDriver GetInstance()
         {
@@ -36,6 +23,21 @@ namespace UnitTestProject.CommonEntities
                 new Driver();
             }
             return _driver;
+        }
+
+        public static void OpenSteam()
+        {
+            GetInstance().Navigate().GoToUrl(JsonConfigurator.GetConfigurationData().SteamUrl);
+        } 
+        
+        public static void MakeNullable()
+        {
+            _driver = null;
+        }
+
+        public static void ChooseLanguage(string _language)
+        {
+            language = _language;
         }
     }
 }

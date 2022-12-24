@@ -1,43 +1,38 @@
-﻿using System;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
+using UnitTestProject.CustomConfigurations.Configs;
 
 namespace UnitTestProject.CustomConfigurations
 {
     public static class JsonConfigurator
     {
-        public static string GetSteamUrl()
-        {
-            IConfigurationSection configurationData = 
-                GetConfigurationRoot().GetSection(nameof(ConfigurationDataConfig));
-            return configurationData.Get<ConfigurationDataConfig>().SteamUrl;
-        }
-
         public static ConfigurationDataConfig GetConfigurationData()
         {
             IConfigurationSection configurationData = 
-                GetConfigurationRoot().GetSection(nameof(ConfigurationDataConfig));
+                GetConfigurationConfigDataRoot().GetSection(nameof(ConfigurationDataConfig));
             return configurationData.Get<ConfigurationDataConfig>();
         }
         
-        public static string MainPageUniqueLocator()
-        {
-            IConfigurationSection testData = 
-                GetConfigurationRoot().GetSection(nameof(TestDataConfig));
-            return testData.Get<TestDataConfig>().MainPageUniqueLocator;
-        }
-
         public static TestDataConfig GetTestData()
         {
             IConfigurationSection testData = 
-                GetConfigurationRoot().GetSection(nameof(TestDataConfig));
+                GetConfigurationTestDataRoot().GetSection(nameof(TestDataConfig));
             return testData.Get<TestDataConfig>();
         }
 
-        private static IConfigurationRoot GetConfigurationRoot()
+        private static IConfigurationRoot GetConfigurationConfigDataRoot()
         {
             IConfigurationRoot config = new ConfigurationBuilder()
                 .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-                .AddJsonFile("appsettings.json")
+                .AddJsonFile("config.json")
+                .Build();
+            return config;
+        }
+        
+        private static IConfigurationRoot GetConfigurationTestDataRoot()
+        {
+            IConfigurationRoot config = new ConfigurationBuilder()
+                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                .AddJsonFile("testData.json")
                 .Build();
             return config;
         }

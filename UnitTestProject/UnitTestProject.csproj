@@ -19,7 +19,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Include="bin\Debug\net5.0\appsettings.json" />
+      <None Include="CustomConfigurations\appsettings.json" />
     </ItemGroup>
 
 </Project>
