@@ -1,4 +1,4 @@
-namespace UnitTestProjectл.Factory;
+namespace MyTest.Factory;
 
 public interface IBrowser
 {

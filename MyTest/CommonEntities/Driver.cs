@@ -1,8 +1,8 @@
+﻿using MyTest.CustomConfigurations;
+using MyTest.Factory;
 using OpenQA.Selenium;
-using UnitTestProject.CustomConfigurations;
-using UnitTestProject.Factory;
 
-namespace UnitTestProject.CommonEntities
+namespace MyTest.CommonEntities
 {
     public class Driver
     {

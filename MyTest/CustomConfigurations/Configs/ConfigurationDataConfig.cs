@@ -1,4 +1,4 @@
-﻿namespace UnitTestProject.CustomConfigurations.Configs
+﻿namespace MyTest.CustomConfigurations.Configs
 {
     public class ConfigurationDataConfig
     {

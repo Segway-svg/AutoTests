@@ -1,7 +1,8 @@
+using System;
+using MyTest.CommonEntities;
 using OpenQA.Selenium;
-using UnitTestProject.CommonEntities;
 
-namespace UnitTestProject.FirstCase.PageObjects;
+namespace MyTest.FirstCase.PageObjects;
 
 public class AboutPage
 {

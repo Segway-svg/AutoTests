@@ -1,7 +1,8 @@
-﻿using Microsoft.Extensions.Configuration;
-using UnitTestProject.CustomConfigurations.Configs;
+﻿using System;
+using Microsoft.Extensions.Configuration;
+using MyTest.CustomConfigurations.Configs;
 
-namespace UnitTestProject.CustomConfigurations
+namespace MyTest.CustomConfigurations
 {
     public static class JsonConfigurator
     {

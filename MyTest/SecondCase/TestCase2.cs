@@ -1,9 +1,10 @@
+using MyTest.CommonEntities;
+using MyTest.CustomConfigurations;
+using MyTest.SecondCase.DataStructures;
+using MyTest.SecondCase.PageObjects;
 using NUnit.Framework;
-using SteamHw.CommonEntities;
-using SteamHw.CustomConfigurations;
-using SteamHw.SecondCase.PageObjects;
 
-namespace SteamHw.SecondCase
+namespace MyTest.SecondCase
 {
     public class TestCase2
     {

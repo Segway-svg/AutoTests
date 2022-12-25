@@ -1,4 +1,4 @@
-namespace UnitTestProject.Factory;
+namespace MyTest.Factory;
 
 public class ChromeBrowser : IBrowser
 {

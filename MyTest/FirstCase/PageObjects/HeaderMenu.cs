@@ -1,12 +1,12 @@
+using MyTest.CommonEntities;
 using OpenQA.Selenium;
-using UnitTestProject.CommonEntities;
 
-namespace UnitTestProject.FirstCase.PageObjects
+namespace MyTest.FirstCase.PageObjects
 {
     public class HeaderMenu
     {
         private readonly By _aboutButtonLocator = By.XPath("//a[contains(text(), 'ABOUT')]");
-        private readonly By _storeButtonLocator = By.XPath("//a[@data-tooltip-content='.submenu_store']");
+        private readonly By _storeButtonLocator = By.XPath("//div[contains(@class, 'super')]//a[@data-tooltip-content='.submenu_store']");
         
         public void ClickAboutButton()
         {

@@ -1,11 +1,13 @@
+using System;
+using MyTest.CommonEntities;
+using MyTest.CustomConfigurations;
+using MyTest.SecondCase.DataStructures;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
-using SteamHw.CommonEntities;
-using SteamHw.CustomConfigurations;
 
-namespace SteamHw.SecondCase.PageObjects
+namespace MyTest.SecondCase.PageObjects
 {
     public class AllSalesLeadersPage
     {
@@ -21,7 +23,7 @@ namespace SteamHw.SecondCase.PageObjects
         
         private readonly By _topGamePriceFinderLocator = By.XPath("//a[1]//div[contains(@class, 'price_discount')]//div[2]");
         private readonly By _topGamePriceLocator = By.XPath("//a[1]//*[contains(@class, 'responsive_secondrow')]//div[2]");
-        private readonly By _topGameDiscountPriceLocator = By.XPath("//a[1]//div[contains(@class, 'discounted')]//text()");
+        private readonly By _topGameDiscountPriceLocator = By.XPath("//a[1]//div[contains(@class, 'discounted')]");
         
         private readonly By _topGameReleaseDateLocator = By.XPath("//a[1]//div[contains(@class, 'search_released')]");
 
@@ -91,8 +93,12 @@ namespace SteamHw.SecondCase.PageObjects
                 .Contains(JsonConfigurator.GetTestData().IsDiscountPresent))
             {
                 topGameInfoFromList.TopGamePrice = GetTextWithWait(_topGameDiscountPriceLocator);
+                topGameInfoFromList.TopGamePrice = topGameInfoFromList.TopGamePrice.Split("\n")[^1];
             }
-            topGameInfoFromList.TopGamePrice = GetTextWithWait(_topGamePriceLocator);
+            else
+            {
+                topGameInfoFromList.TopGamePrice = GetTextWithWait(_topGamePriceLocator);
+            }
             
             topGameInfoFromList.TopGameReleaseDate = GetTextWithWait(_topGameReleaseDateLocator);
             

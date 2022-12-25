@@ -3,7 +3,7 @@ using OpenQA.Selenium.Edge;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 
-namespace UnitTestProject.Factory;
+namespace MyTest.Factory;
 
 public class Edge : IProduction
 {

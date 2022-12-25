@@ -1,6 +1,4 @@
-using UnitTestProject.Factory;
-
-namespace UnitTestProject.FirstCase.PageObjects;
+namespace MyTest.Factory;
 
 public class EdgeBrowser : IBrowser
 {

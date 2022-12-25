@@ -1,9 +1,9 @@
+using MyTest.CommonEntities;
+using MyTest.CustomConfigurations;
+using MyTest.FirstCase.PageObjects;
 using NUnit.Framework;
-using UnitTestProject.CommonEntities;
-using UnitTestProject.CustomConfigurations;
-using UnitTestProject.FirstCase.PageObjects;
 
-namespace UnitTestProject.FirstCase
+namespace MyTest.FirstCase
 {
     public class TestCase1
     {

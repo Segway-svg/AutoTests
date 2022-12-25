@@ -1,9 +1,10 @@
+using System;
+using MyTest.CommonEntities;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
-using SteamHw.CommonEntities;
 
-namespace SteamHw.SecondCase.PageObjects
+namespace MyTest.SecondCase.PageObjects
 {
     public class SalesLeadersPage
     {

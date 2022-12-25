@@ -1,4 +1,4 @@
-namespace SteamHw.SecondCase
+namespace MyTest.SecondCase.DataStructures
 {
     public record TopGameInfo
     {

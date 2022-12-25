@@ -3,7 +3,7 @@ using OpenQA.Selenium.Chrome;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 
-namespace UnitTestProject.Factory;
+namespace MyTest.Factory;
 
 public class Chrome : IProduction
 {

@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace UnitTestProject.Factory;
+namespace MyTest.Factory;
 
 public interface IProduction
 {
