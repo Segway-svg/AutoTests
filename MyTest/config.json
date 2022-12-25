@@ -1,0 +1,9 @@
+{
+  "ConfigurationDataConfig":{
+    "SteamUrl":  "https://store.steampowered.com/",
+    "Browser": "Chrome",
+    "FirstCaseLanguage": "rus",
+    "SecondCaseLanguage": "es-GB",
+    "DefaultLanguage": "es-GB"
+  }
+}
